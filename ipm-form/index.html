@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Form Data Kader IPM</title>
+
+  <!-- Tailwind CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- File CSS Kustom -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
-  <div class="bg-white p-6 rounded-xl shadow-xl w-full max-w-xl">
+<body class="min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white shadow-xl w-full max-w-xl">
     <h1 class="text-2xl font-bold text-center mb-4">Form Data Kader IPM</h1>
     <form id="kaderForm" class="space-y-4">
+
       <input type="text" name="nama" placeholder="Nama Lengkap" required class="w-full border rounded px-4 py-2" />
 
       <select name="angkatan" required class="w-full border rounded px-4 py-2" id="angkatanDropdown">
@@ -27,7 +32,7 @@
       <input type="file" disabled class="w-full border rounded px-4 py-2 bg-gray-100 cursor-not-allowed" />
       <textarea name="alamat" placeholder="Alamat Lengkap" rows="3" required class="w-full border rounded px-4 py-2"></textarea>
 
-      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-lg w-full">Kirim Data</button>
+      <button type="submit" class="text-white font-bold px-6 py-2 rounded-lg w-full">Kirim Data</button>
     </form>
 
     <p id="suksesMsg" class="text-green-600 text-center mt-4 hidden">✅ Data berhasil dikirim!</p>
@@ -36,8 +41,8 @@
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
-  
-  <!-- Script utama -->
+
+  <!-- File JavaScript Utama -->
   <script src="app.js"></script>
 </body>
 </html>
